@@ -1,1 +1,86 @@
- 
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.form-section {
+    flex: 1;
+    background-color: #fff;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-section h1 {
+    font-size: 2.5rem;
+    color: #d16b8c;
+    margin-bottom: 20px;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-section label {
+    margin-bottom: 8px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.form-section input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-section button {
+    padding: 10px;
+    border: none;
+    background-color: #d16b8c;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-section button:hover {
+    background-color: #b25772;
+}
+
+.form-section p {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.form-section a {
+    color: #d16b8c;
+    text-decoration: none;
+}
+
+.form-section a:hover {
+    text-decoration: underline;
+}
+
+.brand-section {
+    flex: 1;
+    background-color: #f8d5e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand-section .logo-picspire {
+    max-width: 70%;
+}
+
