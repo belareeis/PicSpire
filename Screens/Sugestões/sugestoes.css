@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --RosaClaro:#ffafc7;
+    --RosaMedio:#e99bb2;
+    --RosaEscuro:#a75e76;
+    --Branco:#fbfbfb;
+    --Preto:#000000;
+
+
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: Poppins;
+    background-color: var(--Branco);
+
+}
+
+h1{
+    color: var(--RosaEscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+button{
+    background-color: var(--RosaClaro);
+    border-radius: 40px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    color: var(--Preto);
+    font: bold;
+
+}
+
+#submit{
+    background-color: var(--RosaEscuro);
+    color: var(--Branco);
+    font: bold;
+}
+
+a{
+    text-decoration: none;
+    color:var(--Preto) ;
+
+}
+
+footer{
+    margin-top: 200px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+

@@ -24,4 +24,5 @@ O PicSpire é uma plataforma visual que te conecta a um universo infinito de ins
 - *Armazenamento de imagens*:
   - [AWS S3](https://aws.amazon.com/s3/) para upload e armazenamento seguro de imagens.
 - *Autenticação*:
-  - [Firebase Authentication](https://firebase.google.com/products/auth) para login via e-mail e redes sociais
+  - [Firebase Authentication](https://firebase.google.com/products/auth) para login via e-mail e redes sociais.
+
