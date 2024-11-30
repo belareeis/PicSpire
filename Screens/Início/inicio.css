@@ -4,6 +4,7 @@
     --RosaClaro:#ffafc7;
     --RosaMedio:#e99bb2;
     --RosaEscuro:#a75e76;
+    --Rosa:#d16b8c;
     --Branco:#fbfbfb;
     --Preto:#000000;
 
@@ -13,10 +14,12 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: Poppins;
     box-sizing: border-box;
 }
 
+
+/**
 .container {
     display: flex;
     flex-direction: column;
@@ -25,38 +28,47 @@ body{
     height: 100vh;
     background-color: #f8d5e0;
 }
+**/
 
 .header {
-    margin-bottom: 20px;
+    margin-left: 30px;
 }
 
-.logo {
-    font-size: 3rem;
+.header h1{
+    font-size: 120px;
+    text-align: left;
     font-weight: bold;
-    color: #d16b8c;
-    text-align: center;
+    color: var(--Rosa);
+
 }
 
 .content {
-    font-size: 1.2rem;
-    color: #000000;
-    text-align: center;
+    font-size: 1.6rem;
+    color:var(--Preto);
+    text-align: left;
+    margin-left: 30px;
     margin-bottom: 30px;
 }
 
 .footer {
-    margin-top: 20px;
+    margin-top: 90px;
 }
 
-.start-button {
-    padding: 12px 20px;
+.footer button{
+    position: fixed;
+    top: 90%; 
+    right: 40px; 
+    transform: translateY(-50%);
+    height: 60px;
+    width: 300px;
     border: none;
     border-radius: 25px;
-    background-color: #d16b8c;
+    background-color: var(--Rosa);
     color: #fff;
-    font-size: 1rem;
+    font-size: 2rem;
     cursor: pointer;
     transition: 0.3s;
+
 }
 
 .start-button:hover {
