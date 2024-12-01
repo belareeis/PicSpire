@@ -9,3 +9,111 @@
 
 
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--Branco);
+    color: var(--Preto);
+}
+
+header {
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    position: relative;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--RosaMedio);
+    margin: 0 auto 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header h1 {
+    font-size: 18px;
+    color: var(--RosaEscuro);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+header #file-input {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+nav button {
+    padding: 10px 20px;
+    background-color: var(--RosaMedio);
+    color: var(--Branco);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav button:hover {
+    background-color: var(--RosaEscuro);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--Branco);
+}
+
+main {
+    margin: 20px auto;
+    width: 90%;
+}
+
+main h1 {
+    font-size: 20px;
+    color: var(--RosaEscuro);
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+main .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+    justify-items: center;
+}
+
+main .grid img {
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    background-color: var(--RosaClaro);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
