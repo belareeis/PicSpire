@@ -1,4 +1,4 @@
-![Logo PicSpire](img/Logo-PicSpire.jpeg)
+![Logo PicSpire](https://github.com/belareeis/PicSpire/blob/main/img/Logo-PicSpire.jpeg)
 
 
 # PicSpire
