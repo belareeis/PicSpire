@@ -1,4 +1,4 @@
-![Logo PicSpire]("img/Logo-PicSpire.jpeg")
+<img src="Logo-PicSpire.jpeg" alt="Logo PICSPIRE">
 
 # PicSpire
 
