@@ -107,9 +107,87 @@ main {
     color: #666;
 }
 
-dialog{
-    
+dialog {
+    background-color: var(--Branco);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    margin: auto;
+    text-align: center;
 }
+
+dialog h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--RosaEscuro);
+    margin-bottom: 20px;
+}
+
+.upload-area {
+    border: 2px dashed var(--RosaClaro);
+    border-radius: 10px;
+    background-color: var(--CinzaClaro);
+    padding: 30px;
+    margin-bottom: 20px;
+    color: var(--RosaEscuro);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.upload-area:hover {
+    background-color: var(--RosaClaro);
+    color: var(--Branco);
+}
+
+.description-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--RosaClaro);
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    outline: none;
+    color: var(--RosaEscuro);
+}
+
+.description-input:focus {
+    border-color: var(--RosaEscuro);
+}
+
+.upload-area {
+    border: 2px dashed var(--RosaClaro);
+    border-radius: 10px;
+    background-color: var(--CinzaClaro);
+    padding: 30px;
+    margin-bottom: 20px;
+    color: var(--RosaEscuro);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.upload-area:hover {
+    background-color: var(--RosaClaro);
+    color: var(--Branco);
+}
+
+.description-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--RosaClaro);
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    outline: none;
+    color: var(--RosaEscuro);
+}
+
+.description-input:focus {
+    border-color: var(--RosaEscuro);
+}
+
 
 footer {
     background-color: var(--RosaEscuro);
@@ -133,24 +211,34 @@ footer .material-icons {
 }
 
 
+#picture__input {
+display: none;
 
+}
 
+.picture {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 8 / 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--CinzaClaro);
+    color: var(--RosaEscuro);
+    border: 2px dashed var(--RosaClaro);
+    border-radius: 5px;
+    margin: auto;
+}
 
+.picture__text {
+    font-size: 14px;
+    font-weight: 500;
+}
 
+.picture :hover {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    color:white
+}
 
 
 
@@ -176,4 +264,54 @@ footer .material-icons {
 .card p{
     margin-top: 8px;
 
+}
+
+.close-button {
+    margin-top: 10px;
+    background-color: var(--RosaClaro);
+    color: var(--Branco);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.close-button:hover {
+    background-color: var(--RosaEscuro);
+}
+
+.post-button {
+    margin-top: 10px;
+    background-color: var(--RosaClaro);
+    color: var(--Branco);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.post-button:hover {
+    background-color: var(--RosaEscuro);
+}
+
+#preview-container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#preview-image {
+    max-width: 100%;
+    max-height: 200px;
+    border: 2px solid var(--RosaEscuro);
+    border-radius: 10px;
+    object-fit: contain;
 }
