@@ -107,6 +107,10 @@ main {
     color: #666;
 }
 
+dialog{
+    
+}
+
 footer {
     background-color: var(--RosaEscuro);
     color: #fff;

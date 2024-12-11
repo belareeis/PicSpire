@@ -16,19 +16,9 @@ body{
     padding: 0;
     font-family: Poppins;
     box-sizing: border-box;
+    background-image: url(/img/fundo-florido.jpg);
 }
 
-
-/**
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f8d5e0;
-}
-**/
 
 .header {
     margin-left: 30px;

@@ -11,20 +11,31 @@
 }
 
 body{
+    font-family: Poppins;
     margin: 0;
     padding: 0;
-    font-family: Poppins;
-    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(120deg, #d8dde2, var(--RosaClaro));
+    
 }
 
 .container {
     display: flex;
-    height: 100vh;
+    height: 400px;
+    width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0.6, 0.3, 0.3, 0.3);
+    overflow: hidden;
+    background-color: var(--Branco);
+
 }
 
 .form-section {
     flex: 1;
-    background-color: #fff;
+    background-color: var(--Branco);
     padding: 40px;
     display: flex;
     flex-direction: column;
@@ -32,37 +43,54 @@ body{
 }
 
 .form-section h1 {
-    font-size: 2.5rem;
-    color: #d16b8c;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    font-size: 36px;
+    color:var(--RosaEscuro);
     margin-bottom: 20px;
+}
+
+.form-section label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-section input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid var(--RosaEscuro);
+    border-radius: 30px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    outline: none;
 }
 
 .form-section form {
     display: flex;
     flex-direction: column;
-}
-
-.form-section label {
-    margin-bottom: 8px;
-    font-size: 1rem;
-    color: #000000;
-}
-
-.form-section input {
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
 .form-section button {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
     padding: 10px;
     border: none;
     background-color: #d16b8c;
     color: #fff;
     font-size: 1rem;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
+    font-weight: bolder;
+}
+
+.brand-section h1{
+    font-size: 3rem;
+    color: var(--Branco);
 }
 
 .form-section button:hover {
@@ -86,7 +114,7 @@ body{
 
 .brand-section {
     flex: 1;
-    background-color: #f8d5e0;
+    background-color: var(--RosaMedio);
     display: flex;
     justify-content: center;
     align-items: center;
