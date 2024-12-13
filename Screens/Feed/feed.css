@@ -41,7 +41,7 @@ header nav {
 
 header nav .material-icons {
     font-size: 28px;
-    color: #333;
+    color: var(--RosaEscuro);
     cursor: pointer;
     margin: 0 10px;
 }
@@ -83,22 +83,27 @@ main {
 .conteiner {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 10px;
+    margin: 5px;
 }
 
 .card {
     background: #fff;
-    border-radius: 10px;
+    border-radius: 7px;
+    border: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
     padding: 15px;
+    cursor: pointer;
 }
 
 .card img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+    
 }
 
 .card p {
