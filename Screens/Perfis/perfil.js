@@ -1,4 +1,3 @@
-
 document.querySelectorAll('.card').forEach(card => {
 
     card.addEventListener('click', () => {
@@ -34,7 +33,9 @@ document.querySelectorAll('.card').forEach(card => {
                 color:#fff;
                 border:none;
                 border-radius:50px;
-                cursor:pointer;"
+                cursor:pointer;
+                font-weight:bolder;
+                "
                 
                 >X</button>
                 
@@ -76,9 +77,7 @@ document.querySelectorAll('.card').forEach(card => {
     });
 });
 
-
-
-// Configurações do Pop-Up
+// Pop-Up Criar
 
 const button = document.getElementById("Criar");
 const modal_pop_up = document.querySelector("dialog");
