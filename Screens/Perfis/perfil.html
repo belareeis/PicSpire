@@ -23,7 +23,7 @@
     
     <div class="actions">
 
-        <button>Criar Pasta</button>
+        <button id="btn_abrir_criar_pasta">Criar Pasta</button>
         <button id="Criar">Criar Pic</button>
 
     </div>
@@ -45,6 +45,24 @@
     <!-- Galeria de imagens -->
 
     <main>
+
+        <!-- Pop-Up Criar Pasta -->
+
+        <dialog id="pop_up_criar_pasta">
+
+            <header id="header-pasta">
+                
+                <button id="btn_fechar_pasta">X</button>
+
+            </header>
+
+            <h1 id="title_criar_pasta">Criar Pasta</h1>
+
+            <input type="text" name="nome_da_pasta" id="input_nome_da_pasta" placeholder="Nome da pasta">
+
+            <button id="btn_criar_pasta">Criar</button>
+
+        </dialog>
 
         <!-- Pop-Up Criar -->
 
@@ -104,132 +122,3 @@
     <script src="perfil.js"></script>
 </body>
 </html>
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="perfil.css">
-    <title>Perfil</title>
-</head>
-<body>
-
-    <header>
-
-        <div class="profile-picture">
-
-            <img src="/img/imgperfil.png" alt="Imagem de perfil">
-
-        </div>
-
-        <h1>Nome do usuário</h1>
-
-        <input type="file" id="file-input">
-
-    </header>
-
-    <nav>
-
-        <button><a href="#">Criar pasta</a></button>
-        <button><a href="#">Criar Pic</a></button>
-
-    </nav>
-    
-    <h1>Todas as postagens</h1>
-
-    <main>
-
-
-        <div class="conteiner">
-
-            <div class="card">
-
-                <img src="/img/imgsimbolo.png" alt="Postagem 1">
-
-                <p>teste</p>
-                
-            </div>
-            
-            <div class="card">
-                
-                <img src="/img/imgsimbolo.png" alt="Postagem 2">
-                
-                <p>teste</p>
-            </div>
-            
-            <div class="card">
-                
-                <img src="/img/imgsimbolo.png" alt="Postagem 3">
-                
-                <p>teste</p>
-                
-            </div>
-            
-            <div class="card">
-                
-                <img src="/img/imgsimbolo.png" alt="Postagem 4">
-                
-                <p>teste</p>
-                
-            </div>
-            
-            <div class="card">
-                
-                <img src="/img/imgsimbolo.png" alt="Postagem 5">
-                
-                <p>teste</p>
-                
-            </div>
-            
-            <div class="card">
-                
-                <img src="/img/imgsimbolo.png" alt="Postagem 6">
-                
-                <p>teste</p>
-                
-            </div>
-            
-            <div class="card">
-                
-                <img src="/img/imgsimbolo.png" alt="Postagem 7">
-                
-                <p>teste</p>
-                
-            </div>
-            
-            <div class="card">
-                
-                <img src="/img/imgsimbolo.png" alt="Postagem 8">
-                
-                <p>teste</p>
-                
-            </div>
-            
-            <div class="card">
-                
-                <img src="/img/imgsimbolo.png" alt="Postagem 9">
-                
-                <p>teste</p>
-                
-            </div>
-            
-            <div class="card">
-                
-                <img src="/img/imgsimbolo.png" alt="Postagem 10">
-                
-                <p>teste</p>
-                
-            </div>
-
-
-        </div>
-
-    </main>
-
-</body>
-</html> -->

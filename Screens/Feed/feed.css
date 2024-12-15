@@ -87,10 +87,11 @@ main {
     margin: 5px;
 }
 
+/* Imagens do pop-Up */
+
 .card {
     background: #fff;
     border-radius: 7px;
-    border: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
@@ -245,7 +246,7 @@ display: none;
     color:white
 }
 
-
+/* Postagens do perfil! */
 
 .conteiner{
     display: flex;
@@ -254,7 +255,6 @@ display: none;
 }
 
 .card{
-    border: #000000 solid;
     padding: 10px;
     width: 200px;
     text-align: left;

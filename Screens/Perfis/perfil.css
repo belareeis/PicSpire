@@ -118,6 +118,9 @@ header .icon img {
     object-position: center;
 }
 
+/* pop-up */
+
+
 dialog {
     background-color: var(--Branco);
     border: none;
@@ -131,10 +134,61 @@ dialog {
 }
 
 dialog h1 {
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 600;
     color: var(--RosaEscuro);
     margin-bottom: 20px;
+}
+
+#input_nome_da_pasta{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--RosaClaro);
+    border-radius: 5px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    outline: none;
+    color: var(--RosaEscuro);
+
+}
+
+#btn_criar_pasta{
+    margin-top: 10px;
+    background-color: var(--RosaClaro);
+    color: var(--Branco);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+#btn_criar_pasta:hover{
+    background-color: var(--RosaEscuro);
+}
+
+#btn_fechar_pasta{
+    border: none;
+    border-radius: 60%;
+    background-color: var(--RosaEscuro);
+    color: var(--Branco);
+    width: 30px;
+    padding: 5px;
+    margin-left: 315px;
+
+}
+
+#header-pasta{
+    margin: 10px;
+
+}
+
+#title_criar_pasta{
+    font-weight: bolder;
+    margin-bottom: 60px;
 }
 
 .upload-area {

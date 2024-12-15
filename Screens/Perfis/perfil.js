@@ -1,3 +1,97 @@
+// Pop-Up Criar Pasta
+
+const btn_abrir_criar_pasta = document.getElementById("btn_abrir_criar_pasta")
+const btn_criar_pasta = document.getElementById("btn_criar_pasta")
+const btn_fechar_pasta = document.getElementById("btn_fechar_pasta")
+
+const input_nome_da_pasta = document.getElementById("input_nome_da_pasta")
+const pop_up_criar_pasta = document.getElementById("pop_up_criar_pasta")
+
+btn_abrir_criar_pasta.onclick = function(){
+
+    pop_up_criar_pasta.showModal()
+}
+
+btn_fechar_pasta.onclick = function(){
+
+    pop_up_criar_pasta.close()
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Pop-Up Criar
+
+const button = document.getElementById("Criar");
+const modal_pop_up = document.querySelector("dialog");
+
+const openButton = document.getElementById("Criar");
+const popupDialog = document.getElementById("popupDialog");
+
+const buttonClose = document.getElementById("closePopup");
+
+const pictureInput = document.getElementById("picture__input");
+const previewImage = document.getElementById("preview-image");
+
+
+button.onclick = function(){
+    modal_pop_up.showModal()
+}
+
+buttonClose.onclick = function(){
+    modal_pop_up.close()
+}
+
+
+openButton.addEventListener("click", () => {
+    popupDialog.showModal();
+});
+
+
+
+buttonClose.addEventListener("click", () => {
+    popupDialog.close();
+});
+
+
+pictureInput.addEventListener("change", (event) => {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            previewImage.src = e.target.result; 
+            previewImage.style.display = "block"; 
+        };
+        reader.readAsDataURL(file); 
+        
+    }
+});
+
+// Mostrar o Pop-Up das fotos 
+
 document.querySelectorAll('.card').forEach(card => {
 
     card.addEventListener('click', () => {
@@ -75,51 +169,4 @@ document.querySelectorAll('.card').forEach(card => {
         modal.querySelector('button').addEventListener('click', () => modal.remove());
         modal.querySelector('div:last-child').addEventListener('click', () => modal.remove());
     });
-});
-
-// Pop-Up Criar
-
-const button = document.getElementById("Criar");
-const modal_pop_up = document.querySelector("dialog");
-
-const openButton = document.getElementById("Criar");
-const popupDialog = document.getElementById("popupDialog");
-
-const ButtonClose = document.getElementById("closePopup");
-
-const pictureInput = document.getElementById("picture__input");
-const previewImage = document.getElementById("preview-image");
-
-
-button.onclick = function(){
-    modal_pop_up.showModal()
-}
-
-ButtonClose.onclick = function(){
-    modal_pop_up.close()
-}
-
-
-openButton.addEventListener("click", () => {
-    popupDialog.showModal();
-});
-
-
-
-closeButton.addEventListener("click", () => {
-    popupDialog.close();
-});
-
-
-pictureInput.addEventListener("change", (event) => {
-    const file = event.target.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-            previewImage.src = e.target.result; 
-            previewImage.style.display = "block"; 
-        };
-        reader.readAsDataURL(file); 
-        
-    }
 });
