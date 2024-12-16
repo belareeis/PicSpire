@@ -9,4 +9,3 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         alert("Por favor, preencha todos os campos!");
     }
 });
-
