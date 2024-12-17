@@ -3,40 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Usuário</title>
     <link rel="stylesheet" href="perfil.css">
-    <title>Perfil</title>
 </head>
 <body>
+    
     <header>
-        <div class="profile-picture">
-            <img src="/img/imgperfil.png" alt="Imagem de perfil">
+
+        <div class="icon">
+
+            <img src="https://via.placeholder.com/100" alt="Ícone do Usuário">
+
         </div>
 
-        <h1>Nome do usuário</h1>
-        <input type="file" id="file-input">
+        <h1 class="username">Nome do usuário</h1>
+
     </header>
 
-    <nav>
-        <button><a href="#">Criar pasta</a></button>
-        <button><a href="#">Criar Pic</a></button>
-    </nav>
+    
+    <div class="actions">
+
+        <button id="btn_abrir_criar_pasta">Criar Pasta</button>
+        <button id="Criar">Criar Pic</button>
+
+    </div>
+
+    <!-- Seção com pastas -->
+    <div class="folders">
+
+        <span class="folder">Pasta</span>
+        <span class="folder">Pasta</span>
+        <span class="folder">Pasta</span>
+        <span class="folder">Pasta</span>
+
+    </div>
+
+    <!-- Título de postagens -->
+
+    <h2 class="posts-title">Todas as postagens</h2>
+
+    <!-- Galeria de imagens -->
 
     <main>
-        <h1>Todas as postagens</h1>
-        <div class="grid">
-            <img src="/img/imgsimbolo.png" alt="Postagem 1">
-            <img src="/img/imgsimbolo.png" alt="Postagem 2">
-            <img src="/img/imgsimbolo.png" alt="Postagem 3">
-            <img src="/img/imgsimbolo.png" alt="Postagem 4">
-            <img src="/img/imgsimbolo.png" alt="Postagem 5">
-            <img src="/img/imgsimbolo.png" alt="Postagem 6">
-            <img src="/img/imgsimbolo.png" alt="Postagem 7">
-            <img src="/img/imgsimbolo.png" alt="Postagem 8">
-            <img src="/img/imgsimbolo.png" alt="Postagem 9">
-            <img src="/img/imgsimbolo.png" alt="Postagem 10">
 
+        <!-- Pop-Up Criar Pasta -->
+
+        <dialog id="pop_up_criar_pasta">
+
+            <header id="header-pasta">
+                
+                <button id="btn_fechar_pasta">X</button>
+
+            </header>
+
+            <h1 id="title_criar_pasta">Criar Pasta</h1>
+
+            <input type="text" name="nome_da_pasta" id="input_nome_da_pasta" placeholder="Nome da pasta">
+
+            <button id="btn_criar_pasta">Criar</button>
+
+        </dialog>
+
+        <!-- Pop-Up Criar -->
+
+        <dialog id="popupDialog">
+
+            <h1>Crie seus Pics +</h1>
+
+            <div class="upload-area">
+
+                <label class="picture" for="picture__input">
+
+                    <span class="picture__text">Faça upload</span>
+
+                </label>
+
+                <input type="file" id="picture__input" accept="image/*" />
+
+                <div id = "preview-container">
+
+                    <img id="preview-image" src="" alt="preview da imagem" style="display: none; width: 100%; height: auto; border-radius: 5px;" />
+
+                </div>
+
+            </div>
+            
+            <input type="text" class="description-input" placeholder="Adicionar descrição">
+
+            <button class="post-button">Postar</button>
+            <button class="close-button" id="closePopup">Fechar</button>
+
+        </dialog>
+
+        <!-- Imagens -->
+
+        <div class="gallery" id="gallery">
+    
+            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
+            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
+            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
+            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
+            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
+            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
+            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
+            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
+            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
+            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
+            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
+            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
+            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
+            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
+            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
+    
         </div>
+        
     </main>
 
+    <script src="perfil.js"></script>
 </body>
 </html>
