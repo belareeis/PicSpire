@@ -41,7 +41,7 @@ header nav {
 
 header nav .material-icons {
     font-size: 28px;
-    color: var(--RosaEscuro);
+    color: #333;
     cursor: pointer;
     margin: 0 10px;
 }
@@ -83,28 +83,22 @@ main {
 .conteiner {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 10px;
-    margin: 5px;
+    gap: 20px;
 }
-
-/* Imagens do pop-Up */
 
 .card {
     background: #fff;
-    border-radius: 7px;
+    border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: center;
     padding: 15px;
-    cursor: pointer;
 }
 
 .card img {
     max-width: 100%;
     height: auto;
-    object-fit: cover;
-    object-position: center;
-    
+    border-radius: 10px;
 }
 
 .card p {
@@ -246,7 +240,7 @@ display: none;
     color:white
 }
 
-/* Postagens do perfil! */
+
 
 .conteiner{
     display: flex;
@@ -255,6 +249,7 @@ display: none;
 }
 
 .card{
+    border: #000000 solid;
     padding: 10px;
     width: 200px;
     text-align: left;
