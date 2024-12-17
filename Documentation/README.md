@@ -22,8 +22,3 @@ O PicSpire é uma plataforma visual que te conecta a um universo infinito de ins
 - *Backend*:
   - [PHP](https://nodejs.org/) com [Laravel](https://laravel.com/) para APIs.
   - [MySql](https://www.mysql.com/) para banco de dados.
-- *Armazenamento de imagens*:
-  - [AWS S3](https://aws.amazon.com/s3/) para upload e armazenamento seguro de imagens.
-- *Autenticação*:
-  - [Firebase Authentication](https://firebase.google.com/products/auth) para login via e-mail e redes sociais.
-
