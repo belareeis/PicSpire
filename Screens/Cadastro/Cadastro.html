@@ -10,29 +10,25 @@
     <div class="container">
         <section class="form-section">
             <h1>Cadastro</h1>
-            
-            <form action="/Screens/Sugestões/segestoes.html" method="get">
-                <label for="username">Nome de usuário</label>
-                <input type="text" id="username">
+            <form id="cadastroForm">
+                <label for="username" id="label_nome">Nome de usuário</label>
+                <input type="text" id="username" required>
                 
-                <label for="email">E-mail</label>
-                <input type="email" id="email">
+                <label for="email" id="label_email">E-mail</label>
+                <input type="email" id="email" required>
 
-                <label for="password">Senha</label>
-                <input type="password" id="password">
+                <label for="password" id="label_senha">Senha</label>
+                <input type="password" id="password" required>
 
-                <button type="submit">Cadastrar-se</button>
+                <!-- <span id="successMessage" class="success"></span> -->
+
+                <button type="submit" id="btn_cadastrar">Cadastrar-se</button>
             </form>
         </section>
-
         <section class="brand-section">
-
             <h1>PicSpire</h1>
-            
         </section>
     </div>
-
+    <script src="Cadastro.js"></script>
 </body>
 </html>
-
-
