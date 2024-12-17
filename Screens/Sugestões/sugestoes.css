@@ -48,7 +48,8 @@ button{
     height: 50px;
     margin: 10px;
     color: var(--Preto);
-    font: bold;
+    font-weight: bolder;
+    cursor: pointer;
 
 }
 

@@ -7,10 +7,15 @@
    <title>Cadastro</title>
 </head>
 <body>
+
     <div class="container">
+
         <section class="form-section">
+
             <h1>Cadastro</h1>
+
             <form id="cadastroForm">
+
                 <label for="username" id="label_nome">Nome de usuário</label>
                 <input type="text" id="username" required>
                 
@@ -20,15 +25,21 @@
                 <label for="password" id="label_senha">Senha</label>
                 <input type="password" id="password" required>
 
-                <!-- <span id="successMessage" class="success"></span> -->
+                <button type="submit" id="btn_cadastrar" onclick="salvarDados()">Cadastrar-se</button>
 
-                <button type="submit" id="btn_cadastrar">Cadastrar-se</button>
             </form>
+
         </section>
+
         <section class="brand-section">
+
             <h1>PicSpire</h1>
+
         </section>
+
     </div>
+
     <script src="Cadastro.js"></script>
+
 </body>
 </html>

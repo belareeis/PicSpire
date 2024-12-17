@@ -20,29 +20,6 @@ btn_fechar_pasta.onclick = function(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Pop-Up Criar
 
 const button = document.getElementById("Criar");
@@ -150,7 +127,7 @@ document.querySelectorAll('.card').forEach(card => {
                 border-radius:4px;
                 cursor:pointer;"
                 
-                >Salvar Pic</button>
+                >Excluir pic</button>
 
             </div>
 

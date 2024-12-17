@@ -2,10 +2,13 @@
 
 
 :root{
-
+    --RosaClaro:#ffafc7;
+    --RosaMedio:#e99bb2;
     --RosaEscuro:#a75e76;
+    --RosaIntermediário:#cf678a;
     --Branco:#fbfbfb;
     --Preto:#000000;
+    --Cinza:#333;
 
 
 }
@@ -17,8 +20,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--RosaEscuro);
+    font-family: Poppins;
+    background-color: var(--RosaIntermediário);
     color: var(--Preto);
 }
 
@@ -26,14 +29,16 @@ header {
     text-align: center;
     padding: 30px 20px;
     border-radius: 10px;
-    margin: 20px auto;
+    margin-left: 20px ;
     width: 80%;
     position: relative;
 }
 
 header h1 {
-    font-size: 65px;
-    color: white;
+    display: flex;
+    align-items: end;
+    font-size: 90px;
+    color: var(--Branco);
     margin-bottom: 10px;
     font-weight: bold;
 }
@@ -43,26 +48,39 @@ main {
     width: 90%;
 }
 
-main h1 {
-    font-size: 20px;
-    color: var(--RosaEscuro);
+
+.conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card{
+    height:260px ;
+    width: 200px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 7px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
     text-align: center;
-    margin-bottom: 20px;
-    font-weight: bold;
+    margin: 5px;
+    padding: 15px;
+    cursor: pointer;
 }
 
-main .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 15px;
-    justify-items: center;
-}
-
-main .grid img {
-    width: 100%;
-    height: 100px;
-    border-radius: 10px;
+.card img{
+    border-radius: 5px;
+    max-width: 100%;
+    height: auto;
     object-fit: cover;
-    background-color: var(--RosaClaro);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    object-position: center;
+}
+
+.card p{
+    margin-top: 10px;
+    font-size: 14px;
+    color: var(--Cinza);
+
 }
