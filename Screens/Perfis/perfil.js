@@ -18,7 +18,7 @@ btn_fechar_pasta.onclick = function(){
 
 }
 
-// Input de adicionar imagens ao perfil //
+// Input de adicionar imagens ao perfil // 
 
 const profileImg = document.getElementById('profile-img');
 const imageUpload = document.getElementById('image-upload');

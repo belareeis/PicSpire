@@ -34,29 +34,66 @@ h1{
 }
 
 main{
-    display: flex;
+    display: columnx;
     justify-content: center;
     align-items: center;
     margin-top: 100px;
+    height: 250px;
 }
 
-button{
-    background-color: var(--RosaClaro);
-    border-radius: 40px;
-    border: none;
-    width: 200px;
-    height: 50px;
-    margin: 10px;
-    color: var(--Preto);
-    font-weight: bolder;
-    cursor: pointer;
+.conteiner1{
+    display: flex;
+    height: 60px;
+    gap: 10px;
+    justify-content: center;
+}
 
+.conteiner2{
+    display: flex;
+    height: 60px;
+    gap: 10px;
+    justify-content: center;
+}
+.conteiner3{
+    display: flex;
+    height: 60px;
+    gap: 10px;
+    justify-content: center;
+}
+
+.option{
+    height: 40px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.option{
+    border-radius: 20px;
+    padding: 10px;
+    border: 2px solid #e0e0e0;
+    border-radius: 25px;
+    background-color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.option.selected {
+    background-color: var(--RosaEscuro);
+    color: #fff;
+    border-color: var(--RosaEscuro);
 }
 
 #submit{
     background-color: var(--RosaEscuro);
     color: var(--Branco);
     font: bold;
+    width: 300px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
 }
 
 a{
@@ -66,7 +103,7 @@ a{
 }
 
 footer{
-    margin-top: 200px;
+    margin-top: 60px;
     display:flex;
     justify-content: center;
     align-items: center;
