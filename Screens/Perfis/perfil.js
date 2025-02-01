@@ -18,6 +18,56 @@ btn_fechar_pasta.onclick = function(){
 
 }
 
+// Input de adicionar imagens ao perfil //
+
+const profileImg = document.getElementById('profile-img');
+const imageUpload = document.getElementById('image-upload');
+const removeImageButton = document.getElementById('remove-image');
+
+// Carrega a imagem salva ao carregar a página
+function loadSavedImage() {
+    const savedImage = localStorage.getItem('profileImage');
+    if (savedImage) {
+        profileImg.src = savedImage;
+    } else {
+        profileImg.src = 'default-avatar.png'; // Imagem padrão
+    }
+}
+
+// Salva a imagem no localStorage
+function saveImage(imageSrc) {
+    localStorage.setItem('profileImage', imageSrc);
+}
+
+// Remove a imagem
+function removeImage() {
+    localStorage.removeItem('profileImage');
+    profileImg.src = 'default-avatar.png'; // Volta para a imagem padrão
+}
+
+// Evento para carregar a imagem selecionada
+imageUpload.addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const imageSrc = e.target.result;
+            profileImg.src = imageSrc;
+            saveImage(imageSrc); // Salva a imagem no localStorage
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+// Evento para remover a imagem
+removeImageButton.addEventListener('click', function() {
+    removeImage();
+});
+
+// Carrega a imagem salva ao carregar a página
+window.onload = loadSavedImage;
+
+
 
 
 // Pop-Up Criar

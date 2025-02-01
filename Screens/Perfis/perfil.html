@@ -3,23 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil do Usuário</title>
     <link rel="stylesheet" href="perfil.css">
+    <script src="https://kit.fontawesome.com/4a7adcd534.js" crossorigin="anonymous"></script>
+    <title>Perfil do Usuário</title>
 </head>
 <body>
     
     <header>
 
-        <div class="icon">
+        <div class="profile-picture">
 
-            <img src="https://via.placeholder.com/100" alt="Ícone do Usuário">
+            <div class="profile">
 
-        </div>
+                <label for="image-upload" class="profile-image">
 
-        <h1 class="username">Nome do usuário</h1>
+                    <img id="profile-img" src="/img/icon.png" alt="Imagem de Perfil">
+                    <span class="edit-icon">+</span>
 
-    </header>
+                </label>
 
+                <div id="remove-image" class="remove-icon" title="Remover imagem">
+                    <i class="fa-solid fa-trash"><strong></strong></i>
+                </div>
+
+                <input type="file" id="image-upload" accept="image/*" />
+
+            </div>
+
+
+            <h1 class="username">Nome do usuário</h1>
+            
+        </header>
+        
     
     <div class="actions">
 

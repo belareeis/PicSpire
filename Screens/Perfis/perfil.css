@@ -7,9 +7,11 @@
     --Branco:#fbfbfb;
     --Preto:#000000;
     --Cinza:#333;
-
+    --vermelhoClaro: #ff4d4d;
+    --vermelho: #e60000;
 
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -32,20 +34,100 @@ body {
 header{
     width: 90%;
     max-width: 800px;
-    margin: 20px auto;
+    margin: 40px auto;
     text-align: center;
     
 }
 
+/* Campo de definição de imagem de perfil */
 
-header .icon img {
+.profile-picture{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile{
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.profile-image {
+    display: block;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    width: 150px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border: 5px solid var(--Branco);
+    transition: border-color 0.3s ease;
+}
+
+.profile-image:hover {
+    border-color: var(--RosaMedio);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.edit-icon {
+    position: absolute;
+    bottom: 30px;
+    right: 8px;
+    background-color: var(--RosaMedio);
+    color: var(--Branco);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-image:hover .edit-icon {
+    opacity: 1;
+}
+
+.remove-icon {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--vermelhoClaro) ;
+    color: var(--Branco);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile:hover .remove-icon {
+    opacity: 1;
+}
+
+.remove-icon:hover {
+    background-color: var(--vermelho) ;
+}
+
+#image-upload {
+    display: none; /* Esconde o input de arquivo */
 }
 
 .username {
     color: var(--RosaEscuro);
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin: 40px;;
 }
 
@@ -97,7 +179,7 @@ header .icon img {
 .posts-title {
     font-size: 40px;
     text-align: center;
-    color: #b55d77;
+    color: var(--RosaEscuro);
     margin: 50px;
 }
 
@@ -112,7 +194,7 @@ header .icon img {
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    background-color: #eee;
+    background-color: var(--Branco);
     height: auto;
     object-fit: cover;
     object-position: center;

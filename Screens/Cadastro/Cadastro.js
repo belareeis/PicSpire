@@ -41,31 +41,31 @@ input_email.addEventListener("keyup", ()=>{
 // Salvar dados 
 
 
-function salvarDados() {
+// function salvarDados() {
     
-    const nome = document.getElementById("username").value;
-    const email = document.getElementById("email").value;
-    const idade = document.getElementById("password").value;
+//     const nome = document.getElementById("username").value;
+//     const email = document.getElementById("email").value;
+//     const idade = document.getElementById("password").value;
 
-    const dados = {
-        nome: nome,
-        email: email,
-        idade: idade
-    };
+//     const dados = {
+//         nome: nome,
+//         email: email,
+//         idade: idade
+//     };
 
-    const dadosJSON = JSON.stringify(dados, null, 4); 
+//     const dadosJSON = JSON.stringify(dados, null, 4); 
 
 
-    const blob = new Blob([dadosJSON], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
+//     const blob = new Blob([dadosJSON], { type: "application/json" });
+//     const url = URL.createObjectURL(blob);
 
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "dados_cadastro.json";
-    a.click();
+//     const a = document.createElement("a");
+//     a.href = url;
+//     a.download = "dados_cadastro.json";
+//     a.click();
 
-    URL.revokeObjectURL(url);
+//     URL.revokeObjectURL(url);
 
-    alert("Os dados foram salvos no arquivo JSON.");
-}
+//     alert("Os dados foram salvos no arquivo JSON.");
+// }
 
