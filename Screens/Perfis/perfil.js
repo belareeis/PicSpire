@@ -18,6 +18,7 @@ btn_fechar_pasta.onclick = function(){
 
 }
 
+
 // Input de adicionar imagens ao perfil // 
 
 const profileImg = document.getElementById('profile-img');
@@ -66,7 +67,6 @@ removeImageButton.addEventListener('click', function() {
 
 // Carrega a imagem salva ao carregar a página
 window.onload = loadSavedImage;
-
 
 
 
