@@ -8,4 +8,5 @@
 
     $conect = new mysqli($bd_host,$bd_user,$bd_password);
 
+    
 ?>

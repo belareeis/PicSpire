@@ -14,15 +14,15 @@
 
            <h1>Login</h1>
 
-           <form action="/Screens/Sugestões/segestoes.html" method="get">
+           <form action="Login.php" method="POST">
 
                <label for="username">Nome de usuário</label>
-               <input type="text" id="username">
+               <input type="text" id="username" name="usuario">
                
-               <label for="password">Senha</label>
-               <input type="password" id="password">
+               <label for="password" >Senha</label>
+               <input type="password" id="password" name="senha">
            
-               <button type="submit">Entrar</button>
+               <button type="submit" name="entrar">Entrar</button>
 
            </form>
 
