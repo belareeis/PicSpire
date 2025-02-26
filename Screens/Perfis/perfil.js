@@ -1,3 +1,17 @@
+fetch('perfil_backend.php')
+.then(response => response.json())
+.then(data => {
+    if (data.usuario_nome) {
+        document.getElementById('username').textContent = data.usuario_nome;
+    } else {
+        document.getElementById('username').textContent = "Usuário não encontrado";
+    }
+})
+.catch(error => console.error('Erro ao carregar perfil:', error));
+
+
+
+
 // Pop-Up Criar Pasta
 
 const btn_abrir_criar_pasta = document.getElementById("btn_abrir_criar_pasta")
@@ -197,3 +211,5 @@ document.querySelectorAll('.card').forEach(card => {
         modal.querySelector('div:last-child').addEventListener('click', () => modal.remove());
     });
 });
+
+

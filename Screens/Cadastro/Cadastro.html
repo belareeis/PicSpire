@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="Cadastro.css">
+   <title>Cadastro</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <section class="form-section">
+
+            <h1>Cadastro</h1>
+
+            <form id="cadastroForm" method="POST" action="Cadastro.php">
+
+                <label for="username" id="label_nome">Nome de usuário</label>
+                <input type="text" name="usuario" id="username" required>
+                
+                <label for="email" id="label_email">E-mail</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="password" id="label_senha">Senha</label>
+                <input type="password" name="senha" id="password" required>
+
+                <button type="submit" id="btn_cadastrar" name="cadastrar">Cadastrar-se</button>
+
+            </form>
+
+        </section>
+
+        <section class="brand-section">
+
+            <h1>PicSpire</h1>
+
+        </section>
+
+    </div>
+
+    <script src="Cadastro.js"></script>
+
+</body>
+</html>

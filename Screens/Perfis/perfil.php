@@ -8,6 +8,8 @@
     <title>Perfil do Usuário</title>
 </head>
 <body>
+
+    <?php include 'perfil_config.php'; ?>
     
     <header>
 
@@ -31,7 +33,7 @@
             </div>
 
 
-            <h1 class="username">Nome do usuário</h1>
+            <h1 class="username"><?php echo htmlspecialchars($nome_usuario); ?></h1>
             
         </header>
         
@@ -44,7 +46,7 @@
     </div>
 
     <!-- Seção com pastas -->
-    <div class="folders">
+    <!-- <div class="folders">
 
         <div id="screensList"></div>
 
@@ -55,7 +57,7 @@
 
 
 
-    </div>
+    <!-- </div> -->
 
     <!-- Título de postagens -->
 
@@ -121,8 +123,9 @@
 
         <!-- Imagens -->
 
-        <div class="gallery" id="gallery">
+        <div class="gallery" id="gallery" action="perfil.php">
     
+            <!-- <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
             <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
             <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
             <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
@@ -136,8 +139,7 @@
             <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
             <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
             <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
-            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
-            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
+            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div> -->
     
         </div>
         
