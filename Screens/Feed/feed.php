@@ -1,7 +1,7 @@
 <?php
 
     include('../../settings/config.php');
-
+ 
     if(isset($_POST['postar'])){
 
         if (!isset($_FILES['inputFile']) || $_FILES['inputFile']['error'] != 0) {
@@ -23,7 +23,7 @@
 
         if($extensao != 'jpg' && $extensao != 'png' && $extensao != 'jpeg'){
             die("<script>alert('Você só pode fazer upload de arquivos JPG, JPEG ou PNG');</script>");
-            
+
         } else {
             // Definindo um diretório para salvar a imagem (verifique se existe)
             $upload_dir = '../../uploads/';

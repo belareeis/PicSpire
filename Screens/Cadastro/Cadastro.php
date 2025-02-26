@@ -1,12 +1,10 @@
 <?php
-
     include('../../settings/config.php');
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
         $usuario = $_POST['usuario'];
         $email = $_POST['email'];
-        $senha = $_POST['senha'];
+        $senha = $_POST['senha']; // Senha em texto puro
 
         if (!isset($conect)) {
             die("Erro: Conexão com o banco de dados não encontrada.");
@@ -14,13 +12,8 @@
 
         $conect->select_db($bd_name);
 
+        // Verificar se o e-mail já existe
         $check_email = $conect->prepare("SELECT email FROM usuario WHERE email = ?");
-
-        $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
-        $sql = "INSERT INTO usuario (nome_usuario, senha) VALUES (?, ?)";
-        $stmt = $conect->prepare($sql);
-        $stmt->bind_param("ss", $usuario, $senha_hash);
-
         if ($check_email === false) {
             die("Erro ao preparar consulta para verificar e-mail.");
         }
@@ -31,7 +24,7 @@
         if ($check_email->num_rows > 0) {
             echo "<script>alert('Esse e-mail já foi cadastrado!');</script>";
         } else {
-            
+            // Inserindo o usuário sem hash na senha
             $sql = "INSERT INTO usuario (nome_usuario, email, senha) VALUES (?, ?, ?)";
             $stmt = $conect->prepare($sql);
 
@@ -39,28 +32,20 @@
                 die("Erro ao preparar a consulta de inserção.");
             }
 
-           $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
+            $stmt->bind_param("sss", $usuario, $email, $senha);
 
-           $sql = "INSERT INTO usuario (nome_usuario, email, senha) VALUES (?, ?, ?)";
-           $stmt = $conect->prepare($sql);
-           $stmt->bind_param("sss", $usuario, $email, $senha_hash);
-   
-           if ($stmt->execute()) {
-               echo "<script> 
-                       alert('Cadastro realizado com sucesso!');
-                       window.location.href = '../Feed/feed.html'; 
-                   </script>";
+            if ($stmt->execute()) {
+                echo "<script> 
+                        alert('Cadastro realizado com sucesso!');
+                        window.location.href = '/Screens/Feed/feed.html'; 
+                    </script>";
             } else {
                 echo "<script>alert('Erro ao cadastrar usuário: " . $stmt->error . "');</script>";
             }
         }
 
-        if (isset($check_email)) {
-            $check_email->close();
-        }
-        if (isset($stmt)) {
-            $stmt->close();
-        }
+        $check_email->close();
+        $stmt->close();
         $conect->close();
     }
 ?>
