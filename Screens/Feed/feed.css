@@ -194,37 +194,14 @@ dialog h1 {
     border-color: var(--RosaEscuro);
 }
 
-
-footer {
-    background-color: var(--RosaEscuro);
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-}
-
-footer h1 strong {
-    font-size: 20px;
-}
-
-footer p {
-    font-size: 14px;
-    margin: 5px 0;
-}
-
-footer .material-icons {
-    font-size: 18px;
-    vertical-align: middle;
-}
-
-
 #picture__input {
-display: none;
+    display: none;
 
 }
 
 .picture {
-    width: 100%;
-    max-width: 300px;
+    width: 90%;
+    max-width: 200px;
     aspect-ratio: 8 / 10;
     display: flex;
     align-items: center;
@@ -242,7 +219,7 @@ display: none;
 }
 
 .picture :hover {
-
+    
     color:white
 }
 
@@ -268,7 +245,7 @@ display: none;
 
 .card p{
     margin-top: 8px;
-
+    
 }
 
 .close-button {
@@ -318,5 +295,30 @@ display: none;
     max-height: 200px;
     border: 2px solid var(--RosaEscuro);
     border-radius: 10px;
-    object-fit: contain;
+    object-fit: contain;   
+    
 }
+
+footer {
+    background-color: var(--RosaEscuro);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer h1 strong {
+    font-size: 20px;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+footer .material-icons {
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+
+

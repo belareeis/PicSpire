@@ -87,30 +87,35 @@
 
         <dialog id="popupDialog">
 
-            <h1>Crie seus Pics +</h1>
+            <form action="perfil.php" method="POST">
 
-            <div class="upload-area">
-
-                <label class="picture" for="picture__input">
-
-                    <span class="picture__text">Faça upload</span>
-
-                </label>
-
-                <input type="file" id="picture__input" accept="image/*" />
-
-                <div id = "preview-container">
-
-                    <img id="preview-image" src="" alt="preview da imagem" style="display: none; width: 100%; height: auto; border-radius: 5px;" />
-
+                <h1>Crie seus Pics +</h1>
+    
+                <div class="upload-area">
+    
+                    <label class="picture" for="picture__input">
+    
+                        <span class="picture__text">Faça upload</span>
+    
+                    </label>
+    
+                    <input type="file" id="picture__input" name="inputFile" accept="image/*" />
+    
+                    <div id = "preview-container">
+    
+                        <img id="preview-image" src="" alt="preview da imagem" style="display: none; width: 100%; height: auto; border-radius: 5px;" />
+    
+                    </div>
+    
                 </div>
+                
+                <input type="text" class="description-input" name="descricao" placeholder="Adicionar descrição">
+    
+                <button class="post-button" name="postar">Postar</button>
+                <button class="close-button" id="closePopup">Fechar</button>
 
-            </div>
-            
-            <input type="text" class="description-input" placeholder="Adicionar descrição">
+            </form>
 
-            <button class="post-button">Postar</button>
-            <button class="close-button" id="closePopup">Fechar</button>
 
         </dialog>
 
