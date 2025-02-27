@@ -46,6 +46,7 @@
     </div>
 
     <!-- Seção com pastas -->
+     
     <!-- <div class="folders">
 
         <div id="screensList"></div>
@@ -125,22 +126,26 @@
 
         <div class="gallery" id="gallery" action="perfil.php">
     
-            <!-- <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
-            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
-            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
-            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
-            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
-            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
-            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
-            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
-            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
-            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
-            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
-            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
-            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
-            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div>
-            <div class="card"><img src="https://via.placeholder.com/100x150" alt="Postagem"><p>Teste</p></div> -->
-    
+        <?php
+
+            include('../../settings/config.php');
+
+            $sql = "SELECT id_imagem, url, descricao FROM pics ORDER BY id_imagem DESC";
+            $result = $conect->query($sql);
+
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo '<div class="card" data-id="' . htmlspecialchars($row['id_imagem']) . '">';
+                    echo '<img src="../../uploads/' . htmlspecialchars($row['url']) . '" alt="Imagem postada">';
+                    echo '<p>' . htmlspecialchars($row['descricao']) . '</p>';
+                    echo '</div>';
+                }
+            } else {
+                echo "<p>Nenhuma postagem encontrada.</p>";
+            }
+            
+        ?>
+            
         </div>
         
     </main>

@@ -1,3 +1,5 @@
+<!-- <?php include 'categorias.php'; ?> -->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

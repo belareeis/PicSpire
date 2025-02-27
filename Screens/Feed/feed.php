@@ -73,34 +73,26 @@
      
         <div class="conteiner">
          
-            <?php
-            
-                include('../../settings/config.php');
+        <?php
 
-                // if ($conect->connect_error) {
-                //     die("Erro na conexão com o banco de dados: " . $conect->connect_error);
-                // }
-                
-                // echo "Conectado ao banco de dados com sucesso!";
+            include('../../settings/config.php');
 
-                include('../../settings/config.php');
+            $sql = "SELECT id_imagem, url, descricao FROM pics ORDER BY id_imagem DESC";
+            $result = $conect->query($sql);
 
-                $sql = "SELECT id_imagem, url, descricao FROM pics ORDER BY id_imagem DESC";
-                $result = $conect->query($sql);
-
-                if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                        echo '<div class="card">';
-                        echo '<img src="../../uploads/' . htmlspecialchars($row['url']) . '" alt="Imagem postada">';
-                        echo '<p>' . htmlspecialchars($row['descricao']) . '</p>';
-                        echo '</div>';
-                    }
-                } else {
-                    echo "<p>Nenhuma postagem encontrada.</p>";
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo '<div class="card">';
+                    echo '<img src="../../uploads/' . htmlspecialchars($row['url']) . '" alt="Imagem postada">';
+                    echo '<p>' . htmlspecialchars($row['descricao']) . '</p>';
+                    echo '</div>';
                 }
-            ?>
-            
-           
+            } else {
+                echo "<p>Nenhuma postagem encontrada.</p>";
+            }
+
+        ?>
+                   
         </div>
         
     </main>

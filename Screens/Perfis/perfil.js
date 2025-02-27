@@ -49,11 +49,6 @@ function loadSavedImage() {
     }
 }
 
-// Salva a imagem no localStorage
-function saveImage(imageSrc) {
-    localStorage.setItem('profileImage', imageSrc);
-}
-
 // Remove a imagem
 function removeImage() {
     localStorage.removeItem('profileImage');
@@ -180,7 +175,7 @@ document.querySelectorAll('.card').forEach(card => {
 
 
                 <button 
-                
+                class="excluir_"
                 style="
                 display:block; 
                 margin:15px auto;
@@ -189,7 +184,7 @@ document.querySelectorAll('.card').forEach(card => {
                 color:#fff;
                 border:none;
                 border-radius:4px;
-                cursor:pointer;"
+                cursor:pointer;" 
                 
                 >Excluir pic</button>
 
