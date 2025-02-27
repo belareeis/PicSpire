@@ -42,7 +42,7 @@
 
                 echo "<script> 
                         alert('Cadastro realizado com sucesso!');
-                        window.location.href = 'http://localhost/PicSpire/Screens/Sugestões/sugestoes.html'; 
+                        window.location.href = 'http://localhost/PicSpire/Screens/Sugestões/sugestoes.php'; 
                     </script>";
             } else {
                 echo "<script>alert('Erro ao cadastrar usuário: " . $stmt->error . "');</script>";
