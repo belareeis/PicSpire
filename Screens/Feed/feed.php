@@ -1,58 +1,121 @@
-<?php
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="feed.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4a7adcd534.js" crossorigin="anonymous"></script>
+    <title>Feed</title>
+</head>
+<body>
 
-    include('../../settings/config.php');
- 
-    if(isset($_POST['postar'])){
+    <header>
 
-        if (!isset($_FILES['inputFile']) || $_FILES['inputFile']['error'] != 0) {
-            die("<script>alert('Erro no upload do arquivo. Certifique-se de selecionar uma imagem válida.');</script>");
-        }
+        <nav>
+            <a href="http://localhost/PicSpire/Screens/Perfis/perfil.php">
 
-        $input_file = $_FILES['inputFile']; // Obtendo os detalhes do arquivo
-        $descricao = $_POST['descricao'];
+                <span class="material-icons md-24">account_circle</span>
+            </a>
 
-        $conect->select_db($bd_name);
+                <span class="material-icons md-24" id="Criar">add_circle</span>
 
-        $arquivo_novo = explode('.', $input_file['name']);
+            <div class="pesquisa">
 
-        if (count($arquivo_novo) < 2) {
-            die("<script>alert('Nome de arquivo inválido.');</script>");
-        }
+                <span class="material-icons md-24">search</span>
+                
+                <input type="text" placeholder="Encontre novos usuários!">
+            </div>
+        </nav>
+        <hr>
+        
+    </header>
+    
+    <main>
+        
+        <!-- Popup Criar Pic -->
 
-        $extensao = strtolower(end($arquivo_novo)); // Obtém a extensão do arquivo
+            <dialog id="popupDialog">
 
-        if($extensao != 'jpg' && $extensao != 'png' && $extensao != 'jpeg'){
-            die("<script>alert('Você só pode fazer upload de arquivos JPG, JPEG ou PNG');</script>");
+            <form action="feed_config.php" method="POST" enctype="multipart/form-data">
+                
+                <h1>Crie seus Pics +</h1>
 
-        } else {
-            // Definindo um diretório para salvar a imagem (verifique se existe)
-            $upload_dir = '../../uploads/';
-            if (!is_dir($upload_dir)) {
-                mkdir($upload_dir, 0777, true);
-            }
+                <div class="upload-area">
 
-            // Criando um nome único para evitar conflitos
-            $nome_arquivo = uniqid() . "." . $extensao;
-            $caminho_completo = $upload_dir . $nome_arquivo;
+                    <label class="picture" for="picture__input">
 
-            // Movendo o arquivo para a pasta de uploads
-            if (move_uploaded_file($input_file['tmp_name'], $caminho_completo)) {
-                // Salvando a URL no banco de dados
-                $sql = "INSERT INTO pics (url, descricao) VALUES (?, ?)";
-                $stmt = $conect->prepare($sql);
-                $stmt->bind_param("ss", $nome_arquivo, $descricao);
+                        <span class="picture__text">Faça upload</span>
 
-                if ($stmt->execute()) {
-                    echo "<script>alert('Imagem postada com sucesso!');</script>";
+                    </label>
+
+                    <input type="file" id="picture__input" name="inputFile" accept="image/*" />
+
+                    <div id = "preview-container">
+
+                        <img id="preview-image" src="" alt="preview da imagem" style="display: none; width: 100%; height: auto; border-radius: 5px;" />
+
+                    </div>
+
+                </div>
+
+                <input type="text" class="description-input" name="descricao" placeholder="Adicionar descrição">
+    
+                <button class="post-button" name="postar">Postar</button>
+                <button class="close-button" id="closePopup">Fechar</button>
+            </form>
+                
+
+            </dialog>
+        
+        <!-- Postagens-->    
+     
+        <div class="conteiner">
+         
+            <?php
+            
+                include('../../settings/config.php');
+
+                // if ($conect->connect_error) {
+                //     die("Erro na conexão com o banco de dados: " . $conect->connect_error);
+                // }
+                
+                // echo "Conectado ao banco de dados com sucesso!";
+
+                include('../../settings/config.php');
+
+                $sql = "SELECT id_imagem, url, descricao FROM pics ORDER BY id_imagem DESC";
+                $result = $conect->query($sql);
+
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<div class="card">';
+                        echo '<img src="../../uploads/' . htmlspecialchars($row['url']) . '" alt="Imagem postada">';
+                        echo '<p>' . htmlspecialchars($row['descricao']) . '</p>';
+                        echo '</div>';
+                    }
                 } else {
-                    echo "<script>alert('Erro ao salvar no banco de dados.');</script>";
+                    echo "<p>Nenhuma postagem encontrada.</p>";
                 }
+            ?>
+            
+           
+        </div>
+        
+    </main>
+    
+    <footer>
+        
+        <h1><strong>PicSpire</strong></h1>
+        <p>Todos os direitos reservados</p>
+        
+        <span class="material-icons md-24">copyright</span>
+        
+        <p>2024</p>
 
-                $stmt->close();
-            } else {
-                echo "<script>alert('Erro ao mover o arquivo.');</script>";
-            }
-        }
-    }
-
-?>
+    </footer>
+    
+    <script src="feed.js"></script>
+</body>
+</html>

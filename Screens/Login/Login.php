@@ -31,9 +31,9 @@
                 $_SESSION['usuario'] = $nome_usuario;
                 echo "<script>
                         alert('Login realizado com sucesso!');
-                        window.location.href = 'http://localhost/PicSpire/Screens/Feed/feed.html';
+                        window.location.href = 'http://localhost/PicSpire/Screens/Feed/feed.php';
                     </script>";
-            } else {
+            } else {    
                 echo "<script>alert('Senha incorreta!');</script>";
             }
         } else {

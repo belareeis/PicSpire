@@ -6,7 +6,7 @@
     $bd_password = '';
 
 
-    $conect = new mysqli($bd_host,$bd_user,$bd_password);
+    $conect = new mysqli($bd_host,$bd_user,$bd_password, $bd_name);
 
     
 ?>
